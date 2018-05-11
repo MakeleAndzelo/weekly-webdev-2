@@ -43,7 +43,8 @@ module.exports = {
       host: 'localhost',
       port: 3001,
       files: ['./*.html'],
-      server: { baseDir: ['dist'] }
+      server: { baseDir: ['.'] },
+      browser: 'chromium'
     }),
   ]
 };
