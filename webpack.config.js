@@ -8,7 +8,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'assets/js/[name].js'
+    filename: 'js/[name].js'
   },
   module: {
     rules: [
@@ -38,11 +38,11 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('./assets/css/[name].css'),
+    new ExtractTextPlugin('./css/[name].css'),
     new BrowserSyncPlugin({
       host: 'localhost',
       port: 3001,
-      files: ['./dist/*.html'],
+      files: ['./*.html'],
       server: { baseDir: ['dist'] }
     }),
   ]
