@@ -1,6 +1,8 @@
+/* FONTS */
+/* COLORS */
 html {
   box-sizing: border-box;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   height: 100vh; }
 
 *:after,
@@ -23,6 +25,36 @@ a {
   color: inherit; }
 
 .container {
-  width: 1100px;
+  width: 1170px;
   max-width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  color: #262626; }
+
+.header {
+  width: 100%;
+  position: fixed;
+  padding: 50px 0;
+  transition: .5s all ease-in-out; }
+  .header.scroll {
+    background: white;
+    padding: 15px 0; }
+  .header .container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-auto-flow: column;
+    align-items: center; }
+    .header .container .logo {
+      font-family: "Pacifico"; }
+      .header .container .logo a {
+        display: inline-block; }
+    .header .container .header-nav {
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: 40px; }
+      .header .container .header-nav .nav-item {
+        text-transform: uppercase;
+        font-weight: bold;
+        border-top: 3px solid white;
+        padding-top: 5px; }
+        .header .container .header-nav .nav-item.active {
+          border-top: 3px solid orange; }
