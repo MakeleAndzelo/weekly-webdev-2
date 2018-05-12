@@ -2,6 +2,7 @@ import '../sass/main.sass';
 import 'normalize-css';
 
 let header = document.querySelector('.header');
+let banner = document.querySelector('.banner');
 
 window.addEventListener('scroll', () => {
   if (0 < window.scrollY) {
@@ -10,3 +11,4 @@ window.addEventListener('scroll', () => {
     header.classList.remove('scroll');
   }
 });
+
