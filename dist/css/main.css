@@ -24,6 +24,10 @@ html {
 body {
   height: 100vh; }
 
+h1 {
+  font-size: 45px;
+  font-weight: 900; }
+
 .button {
   -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
@@ -38,7 +42,7 @@ body {
 
 .container {
   width: 1170px;
-  max-width: 100%;
+  max-width: 90%;
   margin: 0 auto;
   color: #262626; }
 
@@ -70,7 +74,7 @@ body {
       .header .container .header-nav .nav-item {
         text-transform: uppercase;
         font-weight: bold;
-        border-top: 3px solid white;
+        border-top: 3px solid rgba(0, 0, 0, 0);
         padding-top: 5px;
         font-size: 16px; }
         .header .container .header-nav .nav-item.active {
@@ -86,7 +90,14 @@ body {
         align-content: center;
     justify-items: left;
     height: 100%;
-    grid-template-columns: 500px;
-    grid-gap: 10px; }
-    .banner .container p {
-      text-align: justify; }
+    grid-template-columns: 300px;
+    position: relative; }
+    .banner .container .content p {
+      text-align: justify;
+      line-height: 140%;
+      margin: 20px 0 40px 0; }
+    .banner .container .scroll-icon {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      margin-left: -14px; }
