@@ -60,6 +60,14 @@ img {
 
 .standard-section {
   padding: 50px; }
+  .standard-section .container {
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
 
 .header {
   width: 100%;
@@ -152,18 +160,13 @@ img {
 
 .about-us {
   background: #00b2b2; }
-  .about-us .container {
-    color: white;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 40px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    .about-us .container h1 {
-      font-size: 70px; }
-    .about-us .container p {
-      line-height: 160%; }
+  .about-us h1 {
+    font-size: 70px; }
+  .about-us p {
+    line-height: 160%; }
+
+.our-services {
+  background: #70bfff; }
 
 @media (max-width: 900px) {
   .header {

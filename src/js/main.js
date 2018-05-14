@@ -28,6 +28,7 @@ navItems.forEach(item => {
     let id = event.target.href.split("#")[1];
     let offset = header.offsetHeight;
     let target = document.querySelector(`#${id}`).offsetTop - offset;
+
     window.scroll({
       top: target,
       left: 0,
@@ -35,5 +36,19 @@ navItems.forEach(item => {
     });
 
     event.preventDefault();
+  });
+});
+
+window.addEventListener('scroll', event => {
+  navItems.forEach(item => {
+    let id = item.href.split("#")[1];
+    let offset = header.offsetHeight;
+    let target = document.querySelector(`#${id}`);
+
+    item.classList.remove('active');
+
+    if ((target.offsetTop <= (window.scrollY + offset)) && ((target.offsetTop + target.offsetHeight) >= (window.scrollY + offset))) {
+      item.classList.add('active');
+    }
   });
 });
