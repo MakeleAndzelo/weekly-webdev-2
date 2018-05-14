@@ -47,7 +47,7 @@ window.addEventListener('scroll', event => {
 
     item.classList.remove('active');
 
-    if ((target.offsetTop <= (window.scrollY + offset)) && ((target.offsetTop + target.offsetHeight) >= (window.scrollY + offset))) {
+    if ((target.offsetTop <= (window.scrollY + offset)) && ((target.offsetTop + target.offsetHeight) > (window.scrollY + offset))) {
       item.classList.add('active');
     }
   });
