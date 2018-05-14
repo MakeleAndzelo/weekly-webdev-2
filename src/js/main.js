@@ -26,7 +26,7 @@ navItems.forEach(item => {
     }
 
     let id = event.target.href.split("#")[1];
-    let offset = 139;
+    let offset = header.offsetHeight;
     let target = document.querySelector(`#${id}`).offsetTop - offset;
     window.scroll({
       top: target,

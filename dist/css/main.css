@@ -168,8 +168,6 @@ img {
 @media (max-width: 900px) {
   .header {
     padding: 30px 0; }
-    .header.scroll {
-      padding: 13px 0; }
     .header .container .logo {
       font-size: 20px; }
     .header .container .header-nav {
