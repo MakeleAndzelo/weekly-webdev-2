@@ -145,6 +145,8 @@ h1 {
     height: 100%;
     grid-template-columns: 300px;
     position: relative; }
+    .banner .container .content h1 {
+      margin-top: 40px; }
     .banner .container .content p {
       text-align: justify;
       line-height: 140%;
