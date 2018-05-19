@@ -6,6 +6,10 @@ let banner = document.querySelector('.banner');
 let hamburgerIcon = document.querySelector('.nav-btn');
 let navItems = document.querySelectorAll('.header-nav .nav-item');
 
+if (0 < window.scrollY) {
+  header.classList.add('scroll');
+}
+
 window.addEventListener('scroll', () => {
   if (0 < window.scrollY) {
     header.classList.add('scroll');

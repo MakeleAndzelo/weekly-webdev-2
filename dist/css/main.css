@@ -216,6 +216,26 @@ h1 {
             -ms-flex-align: center;
                 align-items: center; }
 
+.gallery {
+  background: #ffe92f; }
+  .gallery .images {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+    grid-auto-flow: dense; }
+    .gallery .images img {
+      width: 100%; }
+      .gallery .images img:first-child {
+        grid-column: span 8; }
+      .gallery .images img:nth-child(2) {
+        grid-column: span 4; }
+      .gallery .images img:nth-child(3) {
+        grid-column: span 4; }
+      .gallery .images img:nth-child(4) {
+        grid-column: span 6; }
+      .gallery .images img:last-child {
+        grid-column: span 6; }
+
 @media (max-width: 900px) {
   .header {
     padding: 30px 0; }

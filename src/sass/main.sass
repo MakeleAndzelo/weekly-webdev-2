@@ -143,6 +143,27 @@
         justify-content: center
         align-items: center
 
+.gallery
+  background: $yellow
+  .images
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    grid-gap: 20px
+    grid-auto-flow: dense
+    img
+      width: 100%
+      &:first-child
+        grid-column: span 8
+      &:nth-child(2)
+        grid-column: span 4
+      &:nth-child(3)
+        grid-column: span 4
+      &:nth-child(4)
+        grid-column: span 6
+      &:last-child
+        grid-column: span 6
+
+
 @media (max-width: 900px)
   .header
     padding: 30px 0
