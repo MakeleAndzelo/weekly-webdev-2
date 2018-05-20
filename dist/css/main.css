@@ -53,6 +53,9 @@ h1 {
 .button-blue {
   background: #70bfff; }
 
+.button-green {
+  background: #96b92c; }
+
 .container {
   width: 1170px;
   max-width: 90%;
@@ -248,6 +251,22 @@ h1 {
       .gallery .images img:last-child {
         grid-area: b; }
 
+.subscribe {
+  background: url("/images/subscribe-bg.png") no-repeat center center;
+  background-size: cover;
+  padding: 150px 50px;
+  color: #262626; }
+  .subscribe p {
+    width: 500px;
+    max-width: 100%; }
+  .subscribe form {
+    display: grid;
+    grid-template-columns: 400px 200px;
+    grid-gap: 10px; }
+    .subscribe form input {
+      padding: 17px 15px;
+      border: 1px solid #262626; }
+
 @media (max-width: 900px) {
   .header {
     padding: 30px 0; }
@@ -335,25 +354,11 @@ h1 {
   .gallery h1 {
     font-size: 4rem; }
   .gallery p {
-    text-align: justify;
     padding: 20px 0; }
   .gallery .button {
     margin: 40px 0; }
   .gallery .images {
-    display: grid;
-    grid-template-areas: "x" "c" "z" "v" "b";
-    grid-gap: 20px; }
-    .gallery .images img {
-      -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
-              box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
-      width: 100%; }
-      .gallery .images img:first-child {
-        grid-area: x; }
-      .gallery .images img:nth-child(2) {
-        grid-area: c; }
-      .gallery .images img:nth-child(3) {
-        grid-area: z; }
-      .gallery .images img:nth-child(4) {
-        grid-area: v; }
-      .gallery .images img:last-child {
-        grid-area: b; } }
+    grid-template-areas: "x" "c" "z" "v" "b"; }
+  .subscribe form {
+    grid-template-columns: 1fr;
+    grid-gap: 20px; } }

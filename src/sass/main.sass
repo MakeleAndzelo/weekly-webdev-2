@@ -170,6 +170,21 @@
       &:last-child
         grid-area: b
 
+.subscribe
+  background: url("/images/subscribe-bg.png") no-repeat center center
+  background-size: cover
+  padding: 150px 50px
+  color: $dark
+  p
+    width: 500px
+    max-width: 100%
+  form
+    display: grid
+    grid-template-columns: 400px 200px
+    grid-gap: 10px
+    input
+      padding: 17px 15px
+      border: 1px solid $dark
 
 @media (max-width: 900px)
   .header
@@ -258,24 +273,13 @@
     h1
       font-size: 4rem
     p
-      text-align: justify
       padding: 20px 0
     .button
       margin: 40px 0
     .images
-      display: grid
       grid-template-areas: "x" "c" "z" "v" "b"
+
+  .subscribe
+    form
+      grid-template-columns: 1fr
       grid-gap: 20px
-      img
-        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5)
-        width: 100%
-        &:first-child
-          grid-area: x
-        &:nth-child(2)
-          grid-area: c
-        &:nth-child(3)
-          grid-area: z
-        &:nth-child(4)
-          grid-area: v
-        &:last-child
-          grid-area: b
