@@ -145,23 +145,30 @@
 
 .gallery
   background: $yellow
+  text-align: center
+  color: $dark
+  h1
+    font-size: 4rem
+  p
+    text-align: justify
+    padding: 20px 60px
   .images
     display: grid
-    grid-template-columns: repeat(12, 1fr)
+    grid-template-areas: "x x x x x x x x c c c c" "x x x x x x x x c c c c" "x x x x x x x x c c c c" "x x x x x x x x z z z z" "x x x x x x x x z z z z" "x x x x x x x x z z z z" "v v v v v v b b b b b b" "v v v v v v b b b b b b" "v v v v v v b b b b b b" "v v v v v v 5 5 5 5 5 5"
     grid-gap: 20px
-    grid-auto-flow: dense
     img
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5)
       width: 100%
       &:first-child
-        grid-column: span 8
+        grid-area: x
       &:nth-child(2)
-        grid-column: span 4
+        grid-area: c
       &:nth-child(3)
-        grid-column: span 4
+        grid-area: z
       &:nth-child(4)
-        grid-column: span 6
+        grid-area: v
       &:last-child
-        grid-column: span 6
+        grid-area: b
 
 
 @media (max-width: 900px)
@@ -234,3 +241,41 @@
         font-size: 70px
       p
         line-height: 160%
+  .our-services
+    .section-image
+      h1
+        font-size: 50px
+    .services
+      .service
+        .service-icon
+          border-left: 1px solid $dark
+          width: 80px
+          height: 80px
+          display: flex
+          justify-content: center
+          align-items: center
+  .gallery
+    h1
+      font-size: 4rem
+    p
+      text-align: justify
+      padding: 20px 0
+    .button
+      margin: 40px 0
+    .images
+      display: grid
+      grid-template-areas: "x" "c" "z" "v" "b"
+      grid-gap: 20px
+      img
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5)
+        width: 100%
+        &:first-child
+          grid-area: x
+        &:nth-child(2)
+          grid-area: c
+        &:nth-child(3)
+          grid-area: z
+        &:nth-child(4)
+          grid-area: v
+        &:last-child
+          grid-area: b
