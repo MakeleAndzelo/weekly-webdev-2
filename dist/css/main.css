@@ -56,6 +56,9 @@ h1 {
 .button-green {
   background: #96b92c; }
 
+.button-red {
+  background: #f72b3b; }
+
 .container {
   width: 1170px;
   max-width: 90%;
@@ -266,6 +269,16 @@ h1 {
     .subscribe form input {
       padding: 17px 15px;
       border: 1px solid #262626; }
+
+.blog {
+  background: #b07cf7;
+  color: white;
+  text-align: center; }
+  .blog h1 {
+    font-size: 90px; }
+  .blog p {
+    width: 600px;
+    margin: 20px auto; }
 
 @media (max-width: 900px) {
   .header {
