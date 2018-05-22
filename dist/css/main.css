@@ -229,7 +229,10 @@ h1 {
 .gallery {
   background: #ffe92f;
   text-align: center;
-  color: #262626; }
+  color: #262626;
+  padding: 50px 0; }
+  .gallery .container {
+    grid-template-columns: 1fr; }
   .gallery h1 {
     font-size: 4rem; }
   .gallery p {
@@ -274,11 +277,54 @@ h1 {
   background: #b07cf7;
   color: white;
   text-align: center; }
+  .blog .container {
+    grid-template-columns: 1fr; }
   .blog h1 {
     font-size: 90px; }
-  .blog p {
+  .blog .section-description {
     width: 600px;
     margin: 20px auto; }
+  .blog .posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    grid-gap: 40px;
+    margin: 20px 0; }
+    .blog .posts .post {
+      position: relative;
+      height: 310px;
+      text-align: left;
+      display: grid;
+      -ms-flex-line-pack: end;
+          align-content: end;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center; }
+      .blog .posts .post:first-child {
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(black)), url("/images/blog_1.png");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), black), url("/images/blog_1.png"); }
+      .blog .posts .post:nth-child(2) {
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(black)), url("/images/blog_2.png");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), black), url("/images/blog_2.png"); }
+      .blog .posts .post:last-child {
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(black)), url("/images/blog_3.png");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), black), url("/images/blog_3.png"); }
+      .blog .posts .post .post-date {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 15px;
+        font-weight: 900;
+        font-size: 1.4rem;
+        border-radius: 10px;
+        top: 10px;
+        left: 10px;
+        text-transform: uppercase;
+        line-break: auto;
+        text-align: center; }
+      .blog .posts .post .post-details {
+        margin-left: 10px; }
 
 @media (max-width: 900px) {
   .header {
@@ -374,4 +420,7 @@ h1 {
     grid-template-areas: "x" "c" "z" "v" "b"; }
   .subscribe form {
     grid-template-columns: 1fr;
-    grid-gap: 20px; } }
+    grid-gap: 20px; }
+  .blog .posts {
+    display: grid;
+    grid-template-columns: auto; } }

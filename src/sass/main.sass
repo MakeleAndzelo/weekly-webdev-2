@@ -147,6 +147,9 @@
   background: $yellow
   text-align: center
   color: $dark
+  padding: 50px 0
+  .container
+    grid-template-columns: 1fr
   h1
     font-size: 4rem
   p
@@ -190,12 +193,49 @@
   background: $purple
   color: white
   text-align: center
+  .container
+    grid-template-columns: 1fr
   h1
     font-size: 90px
-  p
+  .section-description
     width: 600px
     margin: 20px auto
-
+  .posts
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    justify-content: center
+    grid-gap: 40px
+    margin: 20px 0
+    .post
+      position: relative
+      height: 310px
+      text-align: left
+      display: grid
+      align-content: end
+      background:
+        repeat: no-repeat
+        size: cover
+        position: center center
+      &:first-child
+        background-image: linear-gradient(rgba(black, .2), black), url("/images/blog_1.png")
+      &:nth-child(2)
+        background-image: linear-gradient(rgba(black, .2), black), url("/images/blog_2.png")
+      &:last-child
+        background-image: linear-gradient(rgba(black, .2), black), url("/images/blog_3.png")
+      .post-date
+        position: absolute
+        background: rgba(black, .5)
+        padding: 15px
+        font-weight: 900
+        font-size: 1.4rem
+        border-radius: 10px
+        top: 10px
+        left: 10px
+        text-transform: uppercase
+        line-break: auto
+        text-align: center
+      .post-details
+        margin-left: 10px
 @media (max-width: 900px)
   .header
     padding: 30px 0
@@ -293,3 +333,8 @@
     form
       grid-template-columns: 1fr
       grid-gap: 20px
+
+  .blog
+    .posts
+      display: grid
+      grid-template-columns: auto
